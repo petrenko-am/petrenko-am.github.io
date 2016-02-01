@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Барбершоп «Бородинский»</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=latin,cyrillic-ext">
+	</head>
+	<body class="catalog_page">
+	<header class="main_header">
+		<div class="container clearfix">
+			<nav class="main_navigation">
+				<ul>
+					<li>
+						<a href="index.html">Главная</a>
+					</li>
+					<li>
+						<a href="#">Информация</a>
+					</li>
+					<li>
+						<a href="#">Новости</a>
+					</li>
+					<li>
+						<a href="text.html">Прайс-лист</a>
+					</li>
+					<li class="active">
+						<a href="catalog.html">Магазин</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="user_block">
+				<a href="#" class="login">Вход</a>
+			</div>
+		</div>
+	</header>
+	
+	<div class="content_center clearfix">
+		<div class="page_title">
+			<h1> Средства для ухода </h1>
+			<ul class="breadcrumbs">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="#">Магазин</a></li>
+				<li class="breadcrumbs_active">Средства по уходу</li>
+			</ul>
+		</div>
+		
+		<aside class="left_column clearfix">
+			<form class="filters" action="#" method="get" name="filter" >
+				<section class="manufacturer">
+					<h3 class="block_title">Производители:</h3>
+					<input type="checkbox" id="baxter" checked><label for="baxter">baxter of California</label>
+					<input type="checkbox" id="natty"><label for="natty">mr natty</label>
+					<input type="checkbox" id="suavecito" checked><label for="suavecito">suavecito</label>
+					<input type="checkbox" id="malin"><label for="malin">malin+goetz</label>
+					<input type="checkbox" id="murrays" disabled><label for="murrays">murray's</label>
+					<input type="checkbox" id="american_crew" checked><label for="american_crew">american crew</label>
+				</section>
+			
+				<section class="goods_group">
+					<h3 class="block_title">Группы товаров:</h3>
+					<input type="radio" name="goods" value="shave" id="shave"><label for="shave">Бритвенные <span class="ots">принадлежности</span></label>
+					<input type="radio" name="goods" value="care" id="care" checked><label for="care">Средства для ухода</label>
+					<input type="radio" name="goods" value="accessory" id="accessory" disabled><label for="accessory">Аксессуары</label>
+				</section>
+				<input class="btn" type="submit" value="Показать"></input> <!-- <a class="btn" href="">Показать</a> -->
+			</form>
+			
+		</aside>
+		<section class="right_column clearfix">
+			<div class="catalog_gallery">
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog-item.html"><img src="img/goods1.jpg" width="220" height="165" alt="Набор для путешествий"></a>
+					<div class="goods_description">
+						<p class="product_type">Набор для путешествий<br> <span class="product_name">"BAXTER OF CALIFORNIA"</span></p> <!-- br закономерен (вебинар по сеткам)-->
+						<div class="buy_row">
+							<span class="price">2090 руб.</span>
+							<a class="btn buy_btn" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods2.jpg" width="220" height="165" alt="Увлажняющий кондиционер"></a>
+					<div class="goods_description">
+						<p class="product_type">Увлажняющий кондиционер<br> <span class="product_name">"BAXTER OF CALIFORNIA"</span></p>
+						<div class="buy_row">
+							<span class="price">750 руб.</span>
+							<a class="btn buy_btn" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods3.jpg" width="220" height="165" alt="Гель для волос"></a>
+					<div class="goods_description">
+						<p class="product_type">Гель для волос<br> <span class="product_name">"Sauecito"</span></p> 
+						<div class="buy_row">
+							<span class="price">290 руб.</span>
+							<a class="btn buy_btn" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods4.jpg" width="220" height="165" alt="Глина для укладки волос"></a>
+					<div class="goods_description">
+						<p class="product_type">Глина для укладки волос<br> <span class="product_name">"American crew"</span></p>
+						<div class="buy_row">
+							<span class="price">500 руб.</span>
+							<a class="btn buy_btn" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods5.jpg" width="220" height="165" alt="Гель для бритья"></a>
+					<div class="goods_description">
+						<p class="product_type">Гель для бритья<br> <span class="product_name">"American crew"</span></p>
+						<div class="buy_row">
+							<span class="price">300 руб.</span>
+							<a class="btn buy_btn" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods6.jpg" width="220" height="165" alt="Набор для бритья"></a>
+					<div class="goods_description">
+						<p class="product_type">Набор для бритья<br> <span class="product_name">"BAXTER OF CALIFORNIA"</span></p> 
+						<div class="buy_row">
+							<span class="price">3 900 руб.</span>
+							<a class="btn buy_btn" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods6.jpg" width="220" height="165" alt="Набор для бритья"></a>
+					<div class="goods_description">
+						<p class="product_type">Набор для бритья<br> <span class="product_name">"BAXTER OF CALIFORNIA"</span></p> 
+						<div class="buy_row">
+							
+							<a class="btn buy_btn btn_str" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods6.jpg" width="220" height="165" alt="Набор для бритья"></a>
+					<div class="goods_description">
+						<p class="product_type">Набор для бритья<br> <span class="product_name">"BAXTER OF CALIFORNIA"</span></p> 
+						<div class="buy_row">
+							
+							<a class="btn buy_btn btn_str" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+				<article class="catalog_gallery_item">
+					<a class="img_href" href="catalog_item.html"><img src="img/goods6.jpg" width="220" height="165" alt="Набор для бритья"></a>
+					<div class="goods_description">
+						<p class="product_type">Набор для бритья<br> <span class="product_name">"BAXTER OF CALIFORNIA"</span></p> 
+						<div class="buy_row">
+							
+							<a class="btn buy_btn btn_str" href="">Купить</a> 
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="gallery_paginator">
+					<a href="#" class="btn gallery_btn">1</a>
+					<span class="btn gallery_btn active">2</span>
+					<a href="#" class="btn gallery_btn">3</a>
+					<a href="#" class="btn gallery_btn">4</a>
+			</div>
+		</section>
+	</div>
+    <footer class="main_footer footer_shadow">
+		<div class="container clearfix">
+			<section class="footer_contacts">
+				Барбершоп «Бородинский»<br>
+				Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+				<a href="#">Как нас найти?</a><br>
+				телефон: +7 (495) 666-02-66
+			</section>
+			<section class="footer_social">
+				<p>Давайте дружить!</p>
+				<a href="#" class="social_btn sprite-vk">Вконтакте</a>
+				<a href="#" class="social_btn sprite-f">Фейсбук</a>
+				<a href="#" class="social_btn sprite-insta">Инстаграм</a>
+			</section>
+			<section class="footer_copyright">
+				<p>Дизайн сайта:</p>
+				<a href="#" class="btn">htmlacademy.ru</a>
+			</section>
+      </div>
+    </footer>
+	<div class="modal_content">
+		<div class="modal_content_close">&times;</div>
+			<h2 class="modal_content_title">Личный кабинет</h2>
+			<p>Введите пожалуйста свой логин и пароль.</p>
+			<form class="login_form" action="/echo" method="post">
+				<input type="text" class="icon_user" name="login" placeholder="Логин" required>
+				<input type="password" class="icon_password" name="password" placeholder="Пароль" required>
+				<input type="checkbox" name="remember" id="remember_me">
+				<label for="remember_me">Запомните меня</label>
+				<a href="#" class="restore">Я забыл пароль!</a>
+				<button type="submit" class="btn">Войти</button>
+			</form>
+	</div>
+	<div class="modal_content_map">
+		<div class="modal_content_close">&times;</div>
+	</div>
+	<script src ="js/login.js"></script>
+  </body>
+</html>

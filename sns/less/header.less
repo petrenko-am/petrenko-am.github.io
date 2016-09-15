@@ -1,0 +1,439 @@
+.page-header
+{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    min-height: 100%;
+
+    transform: translateZ(0);
+
+    color: @font-color--black;
+    background: url('../img/menu-tex1.jpg') 0 0;
+    box-shadow: 5px 0 30px 0 rgba(50, 50, 50, .75);
+    &__burger {
+
+      display: none;
+      float: right;
+      margin: 10px;
+      width: @burgerSize * 1.2;
+      height: @burgerSize;
+
+      span, span:before, span:after {
+        display: block;
+        width: 100%;
+        height: @burgerSize / 5;
+        background: @gold;
+        transition: all 0.5s;
+        backface-visibility: hidden;
+      }
+      span {
+        position: relative;
+        margin: (@burgerSize * 2 / 5) 0 0;
+      }
+
+    span:before, span:after {
+      position: absolute;
+      content: "";
+    }
+
+    span:before {
+      top: @burgerSize * -2 / 5;
+    }
+
+    span:after {
+      top: @burgerSize * 2 / 5;
+    }
+  }
+
+  &__burger.selected {
+
+    span:before {
+      transform: translate(0px, (@burgerSize * 2 / 5)) rotate(-45deg);
+    }
+    span:after {
+      transform: translate(0px, -(@burgerSize * 2 / 5)) rotate(45deg);
+    }
+    span {
+      background: transparent;
+    }
+  }
+
+    &__outer
+    {
+        position: relative;
+
+        width: 180px;
+        height: 93vh; /* height: 680px; */
+        margin: 13% auto;
+        padding: 20px 0;
+
+        background: url('../img/menu-inner-tex.png') 50% 50%;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.75);
+        &::before,
+        &::after
+        {
+            position: absolute;
+            z-index: 1;
+
+            box-sizing: border-box;
+            width: 80px;
+            height: 80px;
+
+            content: '';
+
+            border: 20px solid #000;
+            border-color: #fff;
+            border-radius: 50%;
+            border-image: url('../img/corner.png');
+        }
+        &::before
+        {
+            top: -60px;
+            left: -80px;
+
+            clip: rect(40px, auto, auto, 40px);
+        }
+        &::after
+        {
+            top: 0;
+            right: -80px;
+
+            clip: rect(40px, 40px, auto, auto);
+
+            transform: rotate(90deg);
+        }
+    }
+    &__inner
+    {
+        position: relative;
+
+        max-width: 220px;
+        height: 88.6vh;
+        min-height: 680px;
+        margin: 0 -20px;
+        padding: 0 16px;
+
+        background: url('../img/menu-inner-tex.png') 50% 50%;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, 0) inset;
+        &::before,
+        &::after
+        {
+            position: absolute;
+            z-index: 1;
+
+            box-sizing: border-box;
+            width: 80px;
+            height: 80px;
+
+            content: '';
+
+            border: 20px solid #000;
+            border-color: #fff;
+            border-radius: 50%;
+            border-image: url('../img/corner.png');
+        }
+        &::before
+        {
+            bottom: -80px;
+            left: 0;
+
+            clip: rect(auto, auto, 40px, 40px);
+
+            transform: rotate(270deg);
+        }
+        &::after
+        {
+            right: 0;
+            bottom: -20px;
+
+            clip: rect(auto, 40px, 40px, auto);
+
+            transform: rotate(180deg);
+        }
+        svg
+        {
+            fill: @gray-dark;
+        }
+    }
+    &__logo
+    {
+        display: inline-block;
+
+        width: 190px;
+        height: 75px;
+        margin-bottom: 25px;
+
+        vertical-align: top;
+
+        background: url('../img/logo.png') no-repeat 50% 50%;
+    }
+    &__nav-list
+    {
+        padding: 0;
+
+        list-style: none;
+        .nav-list__item
+        {
+            position: relative;
+
+            padding-left: 25px;
+        }
+    }
+    &__nav-link
+    {
+        font-size: 20px;
+
+        display: inline-block;
+
+        margin: 10px 0;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: @font-color--black;
+        &::before
+        {
+            position: absolute;
+            top: 16px;
+            left: 0;
+
+            width: 11px;
+            height: 11px;
+
+            content: '';
+
+            border: 1px solid @gray;
+            border-radius: 50%;
+            background-image: linear-gradient(90deg, rgba(255,255,255,.5) 50%, @gray);
+            background-size: 2px 2px;
+        }
+        &:hover::before
+        {
+            border-color: @gold;
+            background-image: linear-gradient(90deg, rgba(255,255,255,.5) 50%, @gold);
+        }
+        &:hover
+        {
+            color: @gold;
+        }
+    }
+    &__nav-link--smfont
+    {
+        font-size: 14px;
+
+        text-transform: none;
+    }
+    &__nav-link--services
+    {
+        width: 200px;
+    }
+}
+.services
+{
+    &__list
+    {
+        position: absolute;
+        top: -190px;
+        left: 219px;
+
+        display: none;
+
+        width: 245px;
+        height: 100vh;
+        padding: 190px 0 0 0;
+
+        list-style-type: none;
+
+        transition: .5s;
+        transition: all .5s;
+        transform: translateZ(0);
+
+        opacity: .9;
+        background: rgba(255, 255, 255, .7);
+        background: url(../img/menu-inner-tex.png);
+        box-shadow: inset 10px 0 40px -10px rgba(0,0,0,.75);
+        &::before
+        {
+            position: absolute;
+            top: 212px;
+            left: -45px;
+
+            width: 45px;
+            height: 4px;
+
+            content: '';
+
+            background: @gold;
+        }
+        &::after
+        {
+            position: absolute;
+            top: 212px;
+            left: 0;
+
+            width: 15px;
+            height: 4px;
+
+            content: '';
+
+            background: #fff;
+        }
+        li
+        {
+            padding: 10px 10px 10px 20px;
+        }
+    }
+    &__name
+    {
+        font-size: @font-size--md;
+        line-height: 30px;
+    }
+    &__title
+    {
+        text-decoration: underline;
+        text-transform: uppercase;
+
+        color: @font-color--black;
+    }
+    &__name--hover:hover
+    {
+        color: #fff;
+        background-color: @gold-light;
+        a
+        {
+            color: #fff;
+        }
+    }
+}
+.nav-list__item:hover .services__list
+{
+    display: block;
+
+    transition: .9s;
+}
+.contacts
+{
+    margin-top: 40px;
+    &__tel
+    {
+        font-size: 24px;
+
+        text-decoration: none;
+
+        color: @gold;
+    }
+    &__work-time,
+    .copyright
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+.copyright
+{
+    position: absolute;
+    bottom: 0;
+}
+// Планшетная версия !!!!!!!!!!!!!!!!! 1000px !!!!!!!!!!!!!!!!!!!!
+@media (max-width: @screen-bg)
+{
+    .page-header
+    {
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+        height: 110px;
+        min-height: 110px;
+
+        box-shadow: none;
+        &__burger
+        {
+            display: inline-block;
+
+            margin-top: 12.5px;
+        }
+        &__outer
+        {
+            width: 80%;
+            height: auto;
+            min-height: 90px;
+            margin: 10px auto;
+        }
+        &__inner
+        {
+            width: calc(~"100% + 40px");
+            max-width: none;
+            height: 100%;
+            min-height: 50px;
+        }
+        &__logo
+        {
+            width: 150px;
+            height: 50px;
+            margin: 0;
+
+            background-size: contain;
+        }
+        &__menu
+        {
+            visibility: hidden;
+
+            width: 250px;
+            margin: 0 auto;
+            margin-top: -1200px;
+
+            transition: margin-top 1s, visibility 0s, opacity 4s;
+
+            opacity: 0;
+        }
+    }
+    .copyright
+    {
+        display: none;
+    }
+    .menu-show
+    {
+        visibility: visible;
+
+        margin-top: 30px;
+
+        opacity: 1;
+    }
+    .nav-list__item:hover .services__list
+    {
+        display: none;
+
+        transition: .5s;
+    }
+    .contacts
+    {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .page-header
+    {
+        &__outer
+        {
+            width: 80%;
+        }
+    }
+}
+// Мобильная версия
+@media (max-width: @screen-sm)
+{
+    .page-header
+    {
+        min-width: 320px;
+        &__outer
+        {
+            width: 80%;
+        }
+    }
+}

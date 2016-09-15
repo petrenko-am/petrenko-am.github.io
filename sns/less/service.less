@@ -1,0 +1,172 @@
+.service
+{
+    margin-bottom: 20px;
+    &-wrap
+    {
+        max-width: 80%;
+        padding: 20px 35px 0 20px;
+        &::after
+        {
+            content: '';
+
+            background: url(../img/subtle_white_feathers.png) 100% 100%;
+            background-size: 100px;
+        }
+    }
+    &__title
+    {
+        font-size: @title;
+
+        position: relative;
+
+        margin: 0 0 30px 25px;
+        svg
+        {
+            position: absolute;
+            top: 0;
+            left: -20px;
+        }
+    }
+    &__quote
+    {
+        position: relative;
+        &::before
+        {
+            font-family: Times New Roman;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 10px;
+
+            position: absolute;
+            top: 20px;
+            left: -50px;
+
+            content: '\201c';
+
+            color: #e5e5e5;
+        }
+    }
+    &__team
+    {
+        margin: 0 0 30px 0;
+        &:after
+        {
+            display: table;
+            clear: both;
+
+            content: '';
+        }
+    }
+    &__halfwidth
+    {
+        float: left;
+        overflow: hidden;
+
+        width: 50%;
+        max-height: 300px;
+        h3
+        {
+            margin: 15px 0;
+        }
+        ul
+        {
+            line-height: 30px;
+
+            padding: 0;
+
+            list-style-type: none;
+        }
+    }
+    &__photo
+    {
+        width: 100%;
+        height: auto;
+    }
+    &__list
+    {
+        width: 100%;
+        margin-bottom: 50px;
+        &:after
+        {
+            display: table;
+            clear: both;
+
+            content: '';
+        }
+        ul
+        {
+            float: left;
+
+            width: 50%;
+
+            list-style-type: none;
+            li
+            {
+                line-height: 24px;
+
+                position: relative;
+                &::before
+                {
+                    position: absolute;
+                    top: 9px;
+                    left: -15px;
+
+                    width: 8px;
+                    height: 8px;
+
+                    content: '';
+
+                    border-radius: 50%;
+                    background-color: @gold;
+                }
+            }
+        }
+    }
+    &__portfolio
+    {
+        display: flex;
+
+        height: 100vh;
+        min-height: 100vw;
+        max-height: 100%;
+
+        flex-wrap: wrap;
+        img
+        {
+            width: 25%;
+        }
+    }
+}
+
+@media (max-width: @screen-bg)
+{
+    .service
+    {
+        &-wrap
+        {
+            width: 100%;
+            max-width: 100%;
+            padding: 5%;
+        }
+        &__halfwidth
+        {
+            width: 100%;
+        }
+        &__halfwidth:nth-child(2)
+        {
+            display: none;
+        }
+        &__list
+        {
+            h3
+            {
+                margin: 15px 0;
+            }
+            ul
+            {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}

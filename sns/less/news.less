@@ -1,0 +1,72 @@
+.news
+{
+    height: 100%;
+    padding: 20% 0;
+
+    text-align: center;
+    //   &__item {
+    //     min-height: 180px;
+    //     height: auto;
+    //     width: 100%;
+    //     font-size: 0;
+    //     position: relative;
+    //   }
+    //   &__time {
+    //     display: inline-block;
+    //     vertical-align: middle;
+    //     width: 21.91%;
+    //     font-size: @font-size;
+    //     padding-left: 20px;
+    //     span {
+    //       font-size: 120px;
+    //     }
+    //   }
+    //   &__text {
+    //     display: inline-block;
+    //     vertical-align: middle;
+    //     width: 56.18%;
+    //     padding: 20px 20px;
+    //     font-size: @font-size;
+    //   }
+    //   &__pic {
+    //     display: inline-block;
+    //     vertical-align: middle;
+    //     width: 21.91%;
+    //     box-shadow: inset 50px 0px 35px -20px rgba(255,255,255,1);
+    //     line-height: 0;
+    //     img {
+    // z-index: -1;
+    //     position: relative;
+    //     }
+    //   }
+
+    background: url('../img/subtle_white_feathers.png');
+    &-page main
+    {
+        height: 100%;
+    }
+    &::after
+    {
+        display: table;
+        clear: both;
+
+        content: '';
+    }
+    a
+    {
+        font-size: @font-size--title;
+        line-height: 25px;
+
+        display: inline-block;
+
+        transition: all .5s;
+        vertical-align: middle;
+        text-decoration: none;
+
+        color: @font-color--black;
+        &:hover
+        {
+            color: @gold;
+        }
+    }
+}

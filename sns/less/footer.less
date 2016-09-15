@@ -1,0 +1,66 @@
+.page-footer
+{
+    min-width: 750px;
+    height: 40px;
+    margin-top: -40px;
+    margin-left: 250px;
+
+    background-color: @blue-dark;
+}
+.social-links
+{
+    font-size: 0;
+    line-height: 40px;
+
+    width: 200px;
+    margin: 0 auto;
+}
+.social-link
+{
+    display: inline-block;
+
+    width: 50px;
+    height: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+    svg
+    {
+        width: 20px;
+        height: 20px;
+
+        fill: @gray-dark;
+    }
+    &:hover svg
+    {
+        fill: @gold;
+    }
+    &:hover .icon-instagram
+    {
+        fill: url(#gradient-insta);
+    }
+    &:hover .icon-twitter
+    {
+        fill: @twitter;
+    }
+    &:hover .icon-facebook-logo
+    {
+        fill: @facebook;
+    }
+    &:hover .icon-mail
+    {
+        fill: @gold;
+    }
+}
+.leaflet-bottom
+{
+    display: none!important;
+}
+@media (max-width: @screen-bg)
+{
+    .page-footer
+    {
+        min-width: 100%;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,179 @@
+.aboutus
+{
+    line-height: 20px;
+
+    min-height: 100%;
+    padding: 20px;
+    &::after
+    {
+        display: table;
+        clear: both;
+
+        content: '';
+    }
+    &__inner
+    {
+        height: 30%;
+        margin-bottom: 35px;
+    }
+    &__title
+    {
+        font-size: @title;
+
+        position: relative;
+
+        margin: 0 0 50px 25px;
+        svg
+        {
+            position: absolute;
+            top: -12px;
+            left: -20px;
+        }
+    }
+    &__quote
+    {
+        position: relative;
+
+        color: lighten(@font-color--black, 50%);
+        &::before
+        {
+            font-family: Times New Roman;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 10px;
+
+            position: absolute;
+            top: 20px;
+            left: -50px;
+
+            content: '\201c';
+
+            color: #e5e5e5;
+        }
+    }
+
+    &__slider
+    {
+        min-height: 35%;
+        &::after
+        {
+            display: table;
+            clear: both;
+
+            content: '';
+        }
+        &--salon
+        {
+            padding: 24px 20px;
+
+            background:    -moz-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -moz-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -moz-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -moz-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, @white-dark 15px);
+            background:      -o-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -o-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -o-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -o-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, @white-dark 15px);
+            background: -webkit-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -webkit-radial-gradient(100% 100%, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, @white-dark 15px),
+            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 14px, @white-dark 15px);
+            background-color: @white-dark;
+            background-repeat: no-repeat;
+            background-position: bottom left, bottom right, top right, top left;
+            -webkit-background-size: 50% 50%;
+               -moz-background-size: 50% 50%;
+                    background-size: 50% 50%;
+        }
+        &--head
+        {
+            font-size: 0;
+
+            margin-bottom: 25px;
+            span
+            {
+                font-size: @font-size--md;
+            }
+            h3,
+            p
+            {
+                font-size: @font-size;
+
+                display: inline-block;
+
+                margin: 0;
+
+                vertical-align: middle;
+
+                background-color: @white-dark;
+            }
+            h3
+            {
+                font-weight: 700;
+                line-height: @line-height*1.5;
+
+                width: 30%;
+
+                text-transform: uppercase;
+            }
+            p
+            {
+                width: 70%;
+                padding-left: 40px;
+            }
+        }
+    }
+    &__carousel
+    {
+        height: 100%;
+        padding: 0 30px;
+
+        background-color: @white-dark;
+        &-image
+        {
+            width: 33%;
+            height: auto;
+            padding: 0 5%;
+            img
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &__team-carousel
+    {
+        height: 100%;
+        padding: 0 30px;
+        figure
+        {
+            margin: 0;
+        }
+    }
+    &__slider--team
+    {
+        min-height: 35%;
+        padding: 0 20px;
+    }
+}
+@media (max-width: @screen-bg)
+{
+    .aboutus
+    {
+        padding: 5%;
+    }
+}
+@media (max-width: @screen-md)
+{
+    .aboutus__carousel-image
+    {
+        width: 50%;
+    }
+}
+@media (max-width: @screen-sm-max)
+{
+    .aboutus__carousel-image
+    {
+        width: 100%;
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "studio-ns",
+  "version": "1.0.0",
+  "private": true,
+  "description": "project studio-ns",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrenko-am/sns.git"
+  },
+  "author": "Alexander Petrenko",
+  "bugs": {
+    "url": "https://github.com/petrenko-am/sns/issues"
+  },
+  "homepage": "https://github.com/petrenko-am/sns#readme",
+  "devDependencies": {
+    "autoprefixer": "6.4.1",
+    "editorconfig-tools": "0.1.1",
+    "grunt": "1.0.1",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-less": "1.4.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-postcss": "0.8.0",
+    "load-grunt-tasks": "^3.5.0"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *",
+    "build": "grunt less && grunt postcss",
+    "start": "npm run build && grunt serve"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  },
+  "dependencies": {
+    "grunt-csscomb": "^3.1.1",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
